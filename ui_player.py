@@ -195,6 +195,7 @@ def read_all_players(mem) -> list[dict]:
         ctrl = _read_pcg_player(mem, pcg_slot) or {}
         datum["action_buttons"] = ctrl.get("buttons", bytes(5))
         datum["ctrl"] = ctrl
+        datum["pcg_slot"] = pcg_slot
         players.append(datum)
     return players
 
@@ -305,8 +306,25 @@ class PlayerMixin:
         self._player_action_canvas.pack(fill=tk.BOTH, expand=True)
         self._player_action_canvas.bind(
             "<Configure>", lambda e: self._player_redraw_actions())
+        self._player_action_canvas.bind(
+            "<ButtonPress-1>", self._player_on_action_press)
+        self._player_action_canvas.bind(
+            "<ButtonRelease-1>", self._player_on_action_release)
 
-        self._player_action_buttons = bytes(5)
+        self._player_force_status = ttk.Label(
+            right,
+            text="Click & hold a flag to force-write that bit live and "
+                 "see if the action fires in-game.",
+            foreground="#9898b8", font=("Consolas", 8),
+            wraplength=360, justify=tk.LEFT)
+        self._player_force_status.pack(fill=tk.X, pady=(4, 0))
+
+        self._player_action_buttons   = bytes(5)
+        self._player_action_pcg_slot  = 0
+        self._player_action_cells     = []   # hit-test rects from last redraw
+        self._player_force_active     = None # (byte_idx, mask, name) being forced
+        self._player_force_job        = None # after() id for the write loop
+        self._player_force_count      = 0
 
     # ── Refresh ────────────────────────────────────────────────────────────
 
@@ -371,7 +389,8 @@ class PlayerMixin:
             return
 
         self._player_sel_slot = slot
-        self._player_action_buttons = p.get("action_buttons", bytes(5))
+        self._player_action_buttons  = p.get("action_buttons", bytes(5))
+        self._player_action_pcg_slot = p.get("pcg_slot", 0)
 
         self._player_draw_identity(p)
         self._player_draw_unit_state(p)
@@ -379,6 +398,7 @@ class PlayerMixin:
         self._player_redraw_actions()
 
     def _on_player_select(self, _event=None):
+        self._player_on_action_release()   # don't keep forcing into a stale slot
         self._player_update_detail()
 
     # ── Identity panel ─────────────────────────────────────────────────────
@@ -605,6 +625,9 @@ class PlayerMixin:
         cell_w  = W // cols
         cell_h  = max(28, H // rows)
 
+        forced = self._player_force_active   # (byte_idx, mask, name) or None
+        self._player_action_cells = []
+
         for i, (byte_idx, mask, name, _mode) in enumerate(BUTTON_MAP):
             col    = i % cols
             row    = i // cols
@@ -612,13 +635,20 @@ class PlayerMixin:
             y0     = row * cell_h + 3
             x1     = x0 + cell_w - 6
             y1     = y0 + cell_h - 6
-            bval   = buttons[byte_idx] if byte_idx < len(buttons) else 0
-            active = bool(bval & mask)
-            bg     = "#1e3a6e" if active else "#0a0a14"
-            fg     = "#ffffff" if active else "#3a3a5a"
-            ol     = "#3a80d0" if active else "#1c1c2e"
-            c.create_rectangle(x0, y0, x1, y1,
-                               fill=bg, outline=ol, width=1)
+            self._player_action_cells.append((x0, y0, x1, y1, byte_idx, mask, name))
+
+            bval      = buttons[byte_idx] if byte_idx < len(buttons) else 0
+            active    = bool(bval & mask)
+            is_forced = forced is not None and forced[0] == byte_idx and forced[1] == mask
+
+            if is_forced:
+                bg, fg, ol, lw = "#6e2a1e", "#ffffff", "#f0703a", 2
+            elif active:
+                bg, fg, ol, lw = "#1e3a6e", "#ffffff", "#3a80d0", 1
+            else:
+                bg, fg, ol, lw = "#0a0a14", "#3a3a5a", "#1c1c2e", 1
+
+            c.create_rectangle(x0, y0, x1, y1, fill=bg, outline=ol, width=lw)
             c.create_text((x0+x1)//2, (y0+y1)//2,
                           text=name, fill=fg,
                           font=("Consolas", 7), justify=tk.CENTER)
@@ -626,3 +656,61 @@ class PlayerMixin:
         hex_str = ' '.join(f'{b:02X}' for b in buttons)
         c.create_text(4, H - 4, text=f"raw: {hex_str}",
                       fill="#3a3a5a", font=("Consolas", 8), anchor="sw")
+
+    # ── Action-flag write test ───────────────────────────────────────────
+    # Click-and-hold a flag in the grid to force that bit on at the source
+    # (s_player_control_globals.Buttons, the same bytes _read_pcg_player
+    # decodes) and watch the game. The real controller/engine refreshes
+    # this buffer every tick, so a single write can be overwritten before
+    # anything reads it; holding re-asserts the bit every ~10ms, far
+    # faster than the game's own tick rate, to give it a real chance of
+    # being observed by whatever consumes this buffer. This only tells you
+    # whether THIS field is the one driving the action — it does not
+    # guarantee it (it could be a downstream mirror of an action that's
+    # decided elsewhere).
+
+    def _player_on_action_press(self, event):
+        if not self._mem or self._player_sel_slot is None:
+            return
+        for (x0, y0, x1, y1, byte_idx, mask, name) in self._player_action_cells:
+            if x0 <= event.x <= x1 and y0 <= event.y <= y1:
+                self._player_force_active = (byte_idx, mask, name)
+                self._player_force_count  = 0
+                self._player_force_tick()
+                return
+
+    def _player_on_action_release(self, _event=None):
+        if self._player_force_job is not None:
+            try:
+                self.after_cancel(self._player_force_job)
+            except Exception:
+                pass
+            self._player_force_job = None
+        if self._player_force_active is not None:
+            _, _, name = self._player_force_active
+            self._player_force_status.config(
+                text=f"Released '{name}' after {self._player_force_count} "
+                     f"forced write(s). Did the unit do that on-screen?",
+                foreground="#9898b8")
+        self._player_force_active = None
+        self._player_redraw_actions()
+
+    def _player_force_tick(self):
+        if self._player_force_active is None or not self._mem:
+            return
+        byte_idx, mask, name = self._player_force_active
+        pcg_slot = self._player_action_pcg_slot or 0
+        addr = (PCG_BASE + PCG_PLAYERS_OFFSET
+                + pcg_slot * PCG_PLAYER_SIZE + PCG_P_BUTTONS + byte_idx)
+
+        cur = self._mem.read(addr, 1)
+        if cur is not None:
+            if self._mem.write_bytes(addr, bytes([cur[0] | mask])):
+                self._player_force_count += 1
+
+        self._player_force_status.config(
+            text=f"Forcing '{name}'  (byte {byte_idx}, mask 0x{mask:02X}) "
+                 f"\u2192 0x{addr:08X}   [{self._player_force_count} writes]",
+            foreground="#f0b040")
+        self._player_redraw_actions()
+        self._player_force_job = self.after(10, self._player_force_tick)

@@ -1,0 +1,69 @@
+# Tophat
+
+A multi-tab Python/tkinter application that attaches to Halo 2 running under Xenia via `ReadProcessMemory` and monitors game state in real time.
+
+## Features
+
+- **Objects tab** — live object table with type, tag, health, shields, origin, velocity; filter by type, search by name; type checkbox filters with All/None shortcuts
+- **AUP tab** — Artificially Unintelligent Player: write any object's datum index+salt into the active unit pointer to control any biped or vehicle
+- **Map tab** — calibrated top-down 2D map with object tracking and movement trails; supports custom map image background or auto-rendered BSP geometry
+- **Player tab** — per-player PCG globals, analogue stick visualiser, button state grid
+- **Scripts tab** — HaloScript entity database cross-referenced with the live object table:
+  - *Named Objects* — state badges (NOT YET / PLACED / DEAD), kill trigger enemy counts (`enemies/total`), section grouping, orphaned object detector
+  - *⚔ Enemy Groups* — all `ai_living_count` groups with live enemy count, type breakdown, avg/min HP, kill trigger progress bars
+  - *🔀 Flow* — auto-generated encounter section node graph coloured by state; click a node to jump to that section
+  - *📦 Source Map* — dormant scripts grouped by source file, showing which scripts share an encounter wave system
+  - *📋 Changes* — rolling memory diff feed: spawns, deaths, HP deltas above threshold, teleports; filterable by event type
+  - *⏱ Timers* — pin dormant scripts to track NOT YET → PLACED → DEAD transitions with elapsed time and history
+- **BSP tab** — collision geometry viewer with Top/Front/Side/Iso projections, pan/zoom/rotate controls, per-section selector, Z-slice filter, live object overlay
+- **Overlay** — transparent always-on-top tkinter window showing player position, cluster, HP/shield bars, speed, active encounter sections as pills; click-through, anchors to any corner, F9 to toggle
+
+## Requirements
+
+```
+Python 3.11+
+pywin32          # ReadProcessMemory (Windows only)
+Pillow           # optional — BSP→map background rendering
+```
+
+Install dependencies:
+```
+pip install pywin32 Pillow
+```
+
+## Usage
+
+1. Launch Xenia and load a Halo 2 campaign map
+2. Run `python main.py`
+3. The app auto-connects to the Xenia process on startup
+
+## File Overview
+
+| File | Purpose |
+|---|---|
+| `main.py` | Entry point |
+| `app.py` | `App` class, poll loop, connection management |
+| `constants.py` | Memory addresses, type maps, colours |
+| `memory.py` | `MemoryReader`, process enumeration |
+| `parser.py` | Object table parser |
+| `tag_database.py` | Per-map tag name resolution |
+| `ui_objects.py` | Objects tab |
+| `ui_detail.py` | Detail panel |
+| `ui_aup.py` | AUP tab |
+| `ui_map.py` | Map tab |
+| `ui_player.py` | Player tab |
+| `ui_scripts.py` | Scripts tab + HaloScript database |
+| `ui_bsp.py` | BSP geometry tab |
+| `overlay.py` | Transparent always-on-top position overlay |
+
+## Confirmed Memory Layout (Halo 2 Xbox / Xenia)
+
+- Object array base: `0x3003CEF0`
+- Player array base: `0x30002AD0`
+- PCG base: `0x30004B5C`
+- AUP address: `0x30004C14`
+- Map string: `0x30000008`
+
+## Supported Maps
+
+Scripts and tag databases are included for all 15 campaign missions from the Xbox release.

@@ -22,6 +22,17 @@ MAP_STRING_ADDR  = 0x30000008   # null-terminated scenario path
 MAP_STRING_MAXLEN = 256
 AUP_ADDR         = 0x30004C14   # 2-byte idx + 2-byte salt written by Apply AUP
 
+# ── s_object_data field offsets (relative to a per-object obj_addr) ───────
+# Shared by parser.py (read) and ui_cheats.py (write) so the two paths can't
+# drift apart. Each vector field is 3x float32 (x, y, z) at off/off+4/off+8.
+OBJ_ORIGIN_OFF    = 0x64   # vec3  world position
+OBJ_FORWARD_OFF   = 0x70   # vec3  facing direction (unit vector)
+OBJ_UP_OFF        = 0x7C   # vec3  up direction (unit vector)
+OBJ_TRANS_VEL_OFF = 0x88   # vec3  translational velocity (world units/tick)
+OBJ_ANG_VEL_OFF   = 0x94   # vec3  angular velocity
+OBJ_HEALTH_OFF    = 0xEC   # f32   current health
+OBJ_SHIELDS_OFF   = 0xF0   # f32   current shields
+
 # ── Thresholds ─────────────────────────────────────────────────────────────
 TELEPORT_THRESHOLD = 5.0    # world units per tick to flag as teleport
 HISTORY_MAX_TICKS  = 120    # ticks of history to keep per object

@@ -1,69 +1,66 @@
-# Tophat
+# Halo 2 Xbox Live Object Monitor
 
-A multi-tab Python/tkinter application that attaches to Halo 2 running under Xenia via `ReadProcessMemory` and monitors game state in real time.
-
-## Features
-
-- **Objects tab** — live object table with type, tag, health, shields, origin, velocity; filter by type, search by name; type checkbox filters with All/None shortcuts
-- **AUP tab** — Artificially Unintelligent Player: write any object's datum index+salt into the active unit pointer to control any biped or vehicle
-- **Map tab** — calibrated top-down 2D map with object tracking and movement trails; supports custom map image background or auto-rendered BSP geometry
-- **Player tab** — per-player PCG globals, analogue stick visualiser, button state grid
-- **Scripts tab** — HaloScript entity database cross-referenced with the live object table:
-  - *Named Objects* — state badges (NOT YET / PLACED / DEAD), kill trigger enemy counts (`enemies/total`), section grouping, orphaned object detector
-  - *⚔ Enemy Groups* — all `ai_living_count` groups with live enemy count, type breakdown, avg/min HP, kill trigger progress bars
-  - *🔀 Flow* — auto-generated encounter section node graph coloured by state; click a node to jump to that section
-  - *📦 Source Map* — dormant scripts grouped by source file, showing which scripts share an encounter wave system
-  - *📋 Changes* — rolling memory diff feed: spawns, deaths, HP deltas above threshold, teleports; filterable by event type
-  - *⏱ Timers* — pin dormant scripts to track NOT YET → PLACED → DEAD transitions with elapsed time and history
-- **BSP tab** — collision geometry viewer with Top/Front/Side/Iso projections, pan/zoom/rotate controls, per-section selector, Z-slice filter, live object overlay
-- **Overlay** — transparent always-on-top tkinter window showing player position, cluster, HP/shield bars, speed, active encounter sections as pills; click-through, anchors to any corner, F9 to toggle
+Real-time GUI that reads the Halo 2 object state directly from process memory,
+mapping raw bytes to the C++ structs in Objects.hpp / ObjectDefinitions.hpp.
 
 ## Requirements
 
-```
-Python 3.11+
-pywin32          # ReadProcessMemory (Windows only)
-Pillow           # optional — BSP→map background rendering
-```
-
-Install dependencies:
-```
-pip install pywin32 Pillow
-```
+- Windows (ReadProcessMemory API)
+- Python 3.10+  (standard library only — tkinter + ctypes, no pip install needed)
+- **Run as Administrator** — cross-process memory access requires elevated privileges
+- Halo 2 running in **Xenia** (recommended), XQEMU, or on a debug Xbox
 
 ## Usage
 
-1. Launch Xenia and load a Halo 2 campaign map
-2. Run `python main.py`
-3. The app auto-connects to the Xenia process on startup
+1. Start Halo 2 in your emulator / on hardware
+2. Double-click `launch_monitor.bat` (handles UAC elevation automatically)
+   — OR — right-click `h2_object_monitor.py` → "Run as administrator"
+3. The app auto-detects Xenia/XQEMU by process name; click **⟳ Refresh**
+   if it doesn't appear, select it manually, then click **Connect**
+4. Object table populates and refreshes every 500 ms (adjustable)
 
-## File Overview
+## Memory layout used
 
-| File | Purpose |
-|---|---|
-| `main.py` | Entry point |
-| `app.py` | `App` class, poll loop, connection management |
-| `constants.py` | Memory addresses, type maps, colours |
-| `memory.py` | `MemoryReader`, process enumeration |
-| `parser.py` | Object table parser |
-| `tag_database.py` | Per-map tag name resolution |
-| `ui_objects.py` | Objects tab |
-| `ui_detail.py` | Detail panel |
-| `ui_aup.py` | AUP tab |
-| `ui_map.py` | Map tab |
-| `ui_player.py` | Player tab |
-| `ui_scripts.py` | Scripts tab + HaloScript database |
-| `ui_bsp.py` | BSP geometry tab |
-| `overlay.py` | Transparent always-on-top position overlay |
+Based on CheatEngine .CEM captures and the Yelo Open Sauce SDK headers:
 
-## Confirmed Memory Layout (Halo 2 Xbox / Xenia)
+| Region                    | Address        | Structure               |
+|---------------------------|----------------|-------------------------|
+| Object header DataArray   | `0x3003CEF0`   | `t_object_data`         |
+| Datum entries start       | `+0x34`        | `s_object_header_datum` |
+| Each datum                | 12 bytes each  | salt/flags/type/cluster/addr |
+| Object data (per pointer) | via `addr` ptr | `s_object_data` (0xFC bytes) |
 
-- Object array base: `0x3003CEF0`
-- Player array base: `0x30002AD0`
-- PCG base: `0x30004B5C`
-- AUP address: `0x30004C14`
-- Map string: `0x30000008`
+Key offsets in `s_object_data` (Xbox non-alpha):
+- `+0x64`  Origin (real_point3d)
+- `+0x70`  Forward (real_vector3d)
+- `+0xA0`  Scale
+- `+0xEC`  Health (0.0–1.0)
+- `+0xF0`  Shields (0.0–1.0)
+- `+0xE4`  MaximumVitality
+- `+0xE8`  CurrentVitality
 
-## Supported Maps
+## Features
 
-Scripts and tag databases are included for all 15 campaign missions from the Xbox release.
+- **Live object table** — all 2048 slots scanned each refresh, non-null shown
+- **Type filter** — biped, weapon, scenery, vehicle, etc.
+- **Active-only toggle** — hide inactive/child objects
+- **Search** — filter by index, address, type string, cluster
+- **Detail panel** — full struct dump for selected object with health/shield bars
+- **Column sort** — click any column header
+- **Adjustable poll rate** — 100–5000 ms
+- **Color-coded by type** — each object type has a distinct colour
+- **Health colours** — green > 50%, amber 20–50%, red < 20%
+
+## Notes on emulator compatibility
+
+The base addresses (`0x3003CEF0` for the header array) are hardcoded from the
+CEM captures. If your emulator maps Halo 2's memory to a different host address
+space, you may need to adjust the `ARRAY_BASE` constant near the top of the script.
+Xenia typically presents guest addresses directly, but add a base offset if needed:
+
+```python
+# In h2_object_monitor.py, change:
+ARRAY_BASE = 0x3003CEF0
+# to e.g.:
+ARRAY_BASE = XENIA_BASE_OFFSET + 0x3003CEF0
+```

@@ -1,0 +1,2386 @@
+# File produced by Open Asset Import Library (http://www.assimp.sf.net)
+# (assimp v4.1.0)
+
+newmtl panel_strips_unpainted
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+map_Kd scenarios\bitmaps\solo\spacestation\panel_strips_unpainted.tif
+
+newmtl panel_hall_door_frame
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+map_Kd scenarios\bitmaps\solo\spacestation\panel_hall_door_frame.tif
+
+newmtl fluorescent_uplight_hall
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+map_Kd scenarios\bitmaps\human\military\lights\light_uplight_hall.tif
+
+newmtl grey
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+map_Kd shaders\default_bitmaps\bitmaps\gray_50_percent.tif
+
+newmtl carpet_hall
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+map_Kd scenarios\bitmaps\solo\spacestation\carpet_hall.tif
+
+newmtl panel_hall_column
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+map_Kd scenarios\bitmaps\solo\spacestation\panel_hall_column.tif
+
+newmtl tile_metal_dark
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+map_Kd scenarios\bitmaps\solo\spacestation\tile_metal_dark.tif
+
+newmtl panel_hall_hab
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+map_Kd scenarios\bitmaps\solo\spacestation\panel_hall_hab.tif
+
+newmtl fluorescent_uplight_hall_dark
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+map_Kd scenarios\bitmaps\human\military\lights\light_uplight_hall.tif
+
+newmtl panel_mech_ext_horiz
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+map_Kd scenarios\bitmaps\solo\spacestation\panel_mech_ext_horiz.tif
+
+newmtl panel_hall_mech_floor
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+map_Kd scenarios\bitmaps\solo\spacestation\panel_hall_mech_floor.tif
+
+newmtl panel_hall_door_frame_airlock
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+map_Kd scenarios\bitmaps\solo\spacestation\panel_hall_door_frame_airlock.tif
+
+newmtl panel_mech_tile
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+map_Kd scenarios\bitmaps\solo\spacestation\panel_mech_tile.tif
+
+newmtl panel_mech_strips_hazard_stripe
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+map_Kd scenarios\bitmaps\solo\spacestation\panel_strips_hazard_stripe.tif
+
+newmtl panel_mech_back_wall_warehouse
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+map_Kd scenarios\bitmaps\solo\spacestation\panel_mech_back_wall_warehouse.tif
+
+newmtl panel_mech_long
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+map_Kd scenarios\bitmaps\solo\spacestation\panel_mech_long.tif
+
+newmtl panel_mech_ext_window
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+map_Kd scenarios\bitmaps\solo\spacestation\panel_mech_ext_window.tif
+
+newmtl inamberclad_aft
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+map_Kd objects\cinematics\human\inamberclad\bitmaps\inamberclad_aft.tif
+
+newmtl inamberclad_details
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+map_Kd objects\cinematics\human\inamberclad\bitmaps\inamberclad_details.tif
+
+newmtl inamberclad_fore
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+map_Kd objects\cinematics\human\inamberclad\bitmaps\inamberclad_fore.tif
+
+newmtl inamberclad_numbers
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+map_Kd objects\cinematics\human\inamberclad\bitmaps\inamberclad_numbers.tif
+
+newmtl panel_hall_mech
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+map_Kd scenarios\bitmaps\solo\spacestation\panel_hall_mech.tif
+
+newmtl panel_hall_door_frame_blue
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+map_Kd scenarios\bitmaps\solo\spacestation\panel_hall_door_frame.tif
+
+newmtl panel_hab_blue
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+map_Kd scenarios\bitmaps\solo\spacestation\panel_hab.tif
+
+newmtl panel_hall_hab_blue
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+map_Kd scenarios\bitmaps\solo\spacestation\panel_hall_hab.tif
+
+newmtl glass_basic
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+
+newmtl panel_hab
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+map_Kd scenarios\bitmaps\solo\spacestation\panel_hab.tif
+
+newmtl panel_floor_rubber
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+map_Kd scenarios\bitmaps\solo\spacestation\panel_floor_rubber.tif
+
+newmtl panel_mech_ele_cargo_roof
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+map_Kd scenarios\bitmaps\solo\spacestation\panel_mech_ele_cargo_roof.tif
+
+newmtl glass_interior
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+
+newmtl panel_hall_mech_airlock
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+map_Kd scenarios\bitmaps\solo\spacestation\panel_hall_mech_airlock.tif
+
+newmtl panel_mech_center_gunchamber
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+map_Kd scenarios\bitmaps\solo\spacestation\panel_mech_center_gunchamber.tif
+
+newmtl panel_mech_tile_orange
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+map_Kd scenarios\bitmaps\solo\spacestation\panel_mech_tile_orange.tif
+
+newmtl panel_mech_bulkhead_white
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+map_Kd scenarios\bitmaps\solo\spacestation\panel_mech_bulkhead_white.tif
+
+newmtl panel_mech_back_wall_atrium_blue
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+map_Kd scenarios\bitmaps\solo\spacestation\panel_mech_back_wall_atrium.tif
+
+newmtl panel_mech_back_wall_atrium
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+map_Kd scenarios\bitmaps\solo\spacestation\panel_mech_back_wall_atrium.tif
+
+newmtl door_hangar_cine_fake
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+map_Kd scenarios\bitmaps\solo\spacestation\ss_door_hangar_cinematic_fake.tif
+
+newmtl panel_mech_ext_window_bridge
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+map_Kd scenarios\bitmaps\solo\spacestation\panel_mech_ext_window_bridge.tif
+
+newmtl carpet_tile
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+map_Kd scenarios\bitmaps\solo\spacestation\carpet_tile.tif
+
+newmtl bloom_wall
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+
+newmtl panel_mech_gunbarrel
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+map_Kd scenarios\bitmaps\solo\spacestation\panel_mech_gunchamber.tif
+
+newmtl panel_mech_umbilical
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+map_Kd scenarios\bitmaps\solo\spacestation\panel_mech_umbilical.tif
+
+newmtl panel_mech_floor
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+map_Kd scenarios\bitmaps\solo\spacestation\panel_mech_floor.tif
+
+newmtl panel_mech_gunchamber
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+map_Kd scenarios\bitmaps\solo\spacestation\panel_mech_gunchamber.tif
+
+newmtl gunrack_interior
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+map_Kd scenarios\bitmaps\solo\spacestation\ss_gunrack_interior.tif
+
+newmtl panel_mech_grate
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+map_Kd scenarios\bitmaps\solo\spacestation\panel_mech_grate.tif
+
+newmtl panel_stair_stringer
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+map_Kd scenarios\bitmaps\solo\spacestation\panel_stair_stringer.tif
+
+newmtl panel_stair_step
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+map_Kd scenarios\bitmaps\solo\spacestation\panel_stair_step.tif
+
+newmtl panel_tech_rack
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+map_Kd scenarios\bitmaps\solo\spacestation\panel_tech_rack.tif
+
+newmtl doors_large_poop
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+map_Kd scenarios\bitmaps\solo\spacestation\ss_doors_large.tif
+
+newmtl door_mech_small
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+map_Kd scenarios\bitmaps\solo\spacestation\ss_door_mech_small.tif
+
+newmtl alder_bark
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+map_Kd scenarios\bitmaps\nature\trees\redalder_bark_base.tif
+
+newmtl alder_leaf
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+map_Kd scenarios\bitmaps\nature\trees\alder_leaf.tif
+
+newmtl palm_frond_a
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+map_Kd scenarios\bitmaps\nature\trees\palm_frond_a_dif.tif
+
+newmtl int_holo_glass_tall
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+
+newmtl light_halogen
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+map_Kd scenarios\bitmaps\human\military\lights\light_uplight_hall.tif
+
+newmtl mac_round_lod
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+map_Kd scenarios\bitmaps\solo\spacestation\mac_round_lod.tif
+
+newmtl panel_org_dirt
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+map_Kd scenarios\bitmaps\solo\spacestation\panel_org_dirt.tif
+
+newmtl panel_bridge_ramp_wall
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+map_Kd scenarios\bitmaps\solo\spacestation\panel_bridge_ramp_wall.tif
+
+newmtl panel_bridge_console_base
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+map_Kd scenarios\bitmaps\solo\spacestation\panel_bridge_console_base.tif
+
+newmtl glass_basic_bridge
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+
+newmtl glass_interior_holoscreen
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+
+newmtl panel_mech_back_wall
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+map_Kd scenarios\bitmaps\solo\spacestation\panel_mech_back_wall.tif
+
+newmtl panel_mech_bulkhead_b
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+map_Kd scenarios\bitmaps\solo\spacestation\panel_mech_bulkhead_b.tif
+
+newmtl glass_hangar_breach_char
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+
+newmtl panel_mech_ele_cargo_wall
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+map_Kd scenarios\bitmaps\solo\spacestation\panel_mech_ele_cargo_wall.tif
+
+newmtl panel_mech_back_wall_gunchamber
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+map_Kd scenarios\bitmaps\solo\spacestation\panel_mech_back_wall_gunchamber.tif
+
+newmtl panel_mech_bulkhead
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+map_Kd scenarios\bitmaps\solo\spacestation\panel_mech_bulkhead.tif
+
+newmtl panel_mech_center
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+map_Kd scenarios\bitmaps\solo\spacestation\panel_mech_center.tif
+
+newmtl panel_mech_warehouse_crane
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+map_Kd scenarios\bitmaps\solo\spacestation\panel_mech_warehouse_crane.tif
+
+newmtl elevator_shaft_wall_girders
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+map_Kd scenarios\bitmaps\solo\spacestation\elevator_shaft_wall_girders.tif
+
+newmtl hangar_cine_crane
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+map_Kd scenarios\bitmaps\solo\spacestation\ss_hangar_cine_crane.tif
+
+newmtl cov_dark_purple
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+map_Kd scenarios\bitmaps\covenant\military\metals\cov_dark_purple.tif
+
+newmtl strip_a_purple
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+map_Kd scenarios\bitmaps\covenant\military\metals\strip_a_purple.tif
+
+newmtl strip_b
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+map_Kd scenarios\bitmaps\covenant\military\metals\strip_b_grey.tif
+
+newmtl cov_blue_ext
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+map_Kd scenarios\bitmaps\covenant\military\metals\cov_blue_ext.tif
+
+newmtl panel_f_blue
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+map_Kd scenarios\bitmaps\covenant\military\metals\panel_f_blue_dif.tif
+
+newmtl cov_rug
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+map_Kd scenarios\bitmaps\covenant\military\floors\cov_rug.tif
+
+newmtl rubber_trim_a
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+map_Kd scenarios\bitmaps\covenant\military\floors\rubber_trim_a_dif.tif
+
+newmtl cov_dark_blue
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+map_Kd scenarios\bitmaps\covenant\military\metals\cov_dark_blue.tif
+
+newmtl strip_a_blue
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+map_Kd scenarios\bitmaps\covenant\military\metals\strip_a_blue_dif.tif
+
+newmtl rubber_mat_a
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+map_Kd scenarios\bitmaps\covenant\military\floors\rubber_mat_a_dif.tif
+
+newmtl conduit_metal
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+map_Kd scenarios\bitmaps\solo\highcharity\conduit_metal.tif
+
+newmtl panel_f_purple
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+map_Kd scenarios\bitmaps\covenant\military\metals\panel_f_purple_dif.tif
+
+newmtl panel_g_purple
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+map_Kd scenarios\bitmaps\covenant\military\metals\panel_g_purple.tif
+
+newmtl light_floorstrip_purple
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+map_Kd rasterizer\default_2d[0].tif
+
+newmtl strip_a_purple_lit
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+map_Kd scenarios\bitmaps\covenant\military\metals\strip_a_purple.tif
+
+newmtl panel_g_blue
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+map_Kd scenarios\bitmaps\covenant\military\metals\panel_g_blue.tif
+
+newmtl light_vertstrip_a
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+map_Kd shaders\default_bitmaps\bitmaps\color_black.tif
+
+newmtl cov_blue
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+map_Kd scenarios\bitmaps\covenant\military\metals\cov_blue.tif
+
+newmtl c_bloom_purplight
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+
+newmtl light_vertstrip_a_x
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+map_Kd shaders\default_bitmaps\bitmaps\color_black.tif
+
+newmtl machine_strip_b
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+map_Kd scenarios\bitmaps\covenant\military\tech\machine_strip_b_dif.tif
+
+newmtl panel_f_grey
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+map_Kd scenarios\bitmaps\covenant\military\metals\panel_f_grey_dif.tif
+
+newmtl strip_a_grey
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+map_Kd scenarios\bitmaps\covenant\military\metals\strip_a_grey_dif.tif
+
+newmtl stainedglass_x
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+map_Kd scenarios\bitmaps\covenant\military\glass\stainedglass_dif.tif
+
+newmtl grand_door
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+map_Kd scenarios\bitmaps\solo\highcharity\grand_door.tif
+
+newmtl panel_f_blue_ribbed
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+map_Kd scenarios\bitmaps\covenant\military\metals\panel_f_blue_dif.tif
+
+newmtl cov_purple
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+map_Kd scenarios\bitmaps\covenant\military\metals\cov_purple.tif
+
+newmtl grav_pad
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+map_Kd scenarios\bitmaps\solo\highcharity\grav_pad.tif
+
+newmtl grav_pad_illum
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+
+newmtl fz_inv_warmlight
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+map_Kd shaders\default_bitmaps\bitmaps\gray_50_percent.tif
+
+newmtl c_light_white
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+
+newmtl high_clouds
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+
+newmtl strip_a_blue_lit
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+map_Kd scenarios\bitmaps\covenant\military\metals\strip_a_blue_dif.tif
+
+newmtl rubber_mat_a_flat
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+map_Kd scenarios\bitmaps\covenant\military\floors\rubber_mat_a_flat_dif.tif
+
+newmtl long_volume
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+
+newmtl stainedglass
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+map_Kd scenarios\bitmaps\covenant\military\glass\stainedglass_dif.tif
+
+newmtl cov_petal
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+map_Kd scenarios\bitmaps\covenant\military\signs\cov_petal.tif
+
+newmtl wide_volume_white
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+
+newmtl light_inv_bluish
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+map_Kd shaders\default_bitmaps\bitmaps\gray_50_percent.tif
+
+newmtl c_light_yellow
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+
+newmtl glass_etched_a
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+
+newmtl c_bloom_purplight_x
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+
+newmtl invis_ambient_blue
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+map_Kd shaders\default_bitmaps\bitmaps\gray_50_percent.tif
+
+newmtl matte_grey
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+map_Kd scenarios\bitmaps\human\urban\metals\matte_grey.tif
+
+newmtl grate
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+map_Kd scenarios\bitmaps\covenant\military\metals\cov_grate_dif.tif
+
+newmtl panel_f_grey_dirty
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+map_Kd scenarios\bitmaps\covenant\military\metals\panel_f_grey_dif.tif
+
+newmtl c_light_white_x
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+
+newmtl rounded_carapace
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+map_Kd scenarios\bitmaps\covenant\military\metals\rounded_caripace.tif
+
+newmtl panels_thin_strips
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+map_Kd scenarios\bitmaps\forerunner\industrial\metals\panel_thin_strips.tif
+
+newmtl flat_dark_scratchy
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+map_Kd scenarios\bitmaps\forerunner\industrial\metals\flat_dark_scratchy.tif
+
+newmtl panel_circle_quarter
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+map_Kd scenarios\bitmaps\forerunner\industrial\metals\panel_circle_quarter.tif
+
+newmtl decor_strip
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+map_Kd scenarios\bitmaps\covenant\military\decor\decor_strip_dif.tif
+
+newmtl glass_etched_a_illum
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+
+newmtl scallop
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+map_Kd scenarios\bitmaps\covenant\military\metals\scallop_dif.tif
+
+newmtl space
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+
+newmtl earth_matte
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+
+newmtl moon_matte
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+
+newmtl sky_high_ground
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+
+newmtl sky_high_white
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+
+newmtl sky_high_city
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+
+newmtl sky_panels
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+
+newmtl sky_high_point
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+
+newmtl sky_high_point2
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+
+newmtl sky_panels_det
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+
+newmtl sky_high_clouds
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+
+newmtl sky_high_scrapers
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+
+newmtl sky_high_atmos
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+
+newmtl sky_high_ship
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+
+newmtl sky_high_vol
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+
+newmtl space_stars_twinkle
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+
+newmtl stars_dense
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+
+newmtl cov_bomb
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+map_Kd scenarios\objects\solo\spacestation\pickle\bitmaps\cov_bomb.tif
+
+newmtl cov_bomb_illum
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+
+newmtl cov_bomb_ticker
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+
+newmtl inamberclad_numbers
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+map_Kd objects\cinematics\human\inamberclad\bitmaps\inamberclad_numbers.tif
+
+newmtl inamberclad_aft
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+map_Kd objects\cinematics\human\inamberclad\bitmaps\inamberclad_aft.tif
+
+newmtl inamberclad_details
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+map_Kd objects\cinematics\human\inamberclad\bitmaps\inamberclad_details.tif
+
+newmtl inamberclad_fore
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+map_Kd objects\cinematics\human\inamberclad\bitmaps\inamberclad_fore.tif
+
+newmtl capital_ship_b
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+map_Kd scenarios\objects\covenant\military\capital_ship\bitmaps\capital_ship_b.tif
+
+newmtl capital_ship_a
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+map_Kd scenarios\objects\covenant\military\capital_ship\bitmaps\capital_ship_a.tif
+
+newmtl capital_ship_c
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+
+newmtl antigrav_effects
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+
+newmtl antigrav_effects2
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+map_Kd scenarios\objects\covenant\military\capital_ship\bitmaps\capital_ship_anitgrav_particles.tif
+
+newmtl longsword_hull
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+map_Kd objects\vehicles\longsword\bitmaps\longsword.tif
+
+newmtl longsword_glass
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+map_Kd objects\vehicles\longsword\bitmaps\longsword.tif
+
+newmtl longsword_afterburners
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+
+newmtl invisible
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+
+newmtl ss_prop_matte
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+
+newmtl couch
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+map_Kd shaders\default_bitmaps\bitmaps\gray_50_percent.tif
+
+newmtl light_fluorescent_dim_blue
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+map_Kd scenarios\bitmaps\human\military\lights\light_uplight_hall.tif
+
+newmtl miranda_viewscreen
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+
+newmtl main_forward_view
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+
+newmtl hammer
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+map_Kd objects\weapons\melee\gravity_hammer\bitmaps\gravity_hammer.tif
+
+newmtl poa_class
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+map_Kd objects\cinematics\human\pillarofautumn\bitmaps\poa_class.tif
+
+newmtl poa_class_engine
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+map_Kd objects\cinematics\human\pillarofautumn\bitmaps\poa_class_engines.tif
+
+newmtl poa_engine_exhaust
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+
+newmtl brand_illum
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+
+newmtl branding_iron
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+map_Kd objects\cinematics\covenant\branding_iron\bitmaps\branding_iron.tif
+
+newmtl branding_staff
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+map_Kd objects\cinematics\covenant\branding_iron\bitmaps\branding_iron.tif
+
+newmtl africa_space
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+
+newmtl generic_grey
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+map_Kd incompetent\bitmaps\grey_generic.tif
+
+newmtl holo_const_plate01
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+
+newmtl holo_const_plate01_blue_tint
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+
+newmtl africa_coast
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+
+newmtl pelican_hull
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+map_Kd objects\vehicles\pelican\bitmaps\pelican.tif
+
+newmtl pelican_cockpit
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+map_Kd objects\vehicles\pelican\bitmaps\pelican_bay.tif
+
+newmtl pelican_bay
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+map_Kd objects\vehicles\pelican\bitmaps\pelican_bay.tif
+
+newmtl pelican_seats
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+map_Kd objects\vehicles\pelican\bitmaps\pelican_bay.tif
+
+newmtl pelican_cargo_net
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+map_Kd objects\vehicles\pelican\bitmaps\pelican_cargo_net.tif
+
+newmtl pelican_decals
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+map_Kd objects\vehicles\pelican\bitmaps\pelican_decals.tif
+
+newmtl pelican_lights
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+
+newmtl pelican_glass
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+
+newmtl panel_crate
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+map_Kd scenarios\bitmaps\solo\spacestation\ss_panel_crate.tif
+
+newmtl big_generator
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+map_Kd scenarios\objects\solo\earthcity\bitmaps\big_generator_color.tif
+
+newmtl big_generator_in
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+map_Kd scenarios\objects\solo\earthcity\bitmaps\big_generator_in.tif
+
+newmtl invalid
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+map_Kd objects\bitmaps\default\grid_256x256.tif
+
+newmtl cov_boarding_craft
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+map_Kd scenarios\objects\covenant\military\cov_boarding_craft\bitmaps\boarding_craft.tif
+
+newmtl heat_glow
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+
+newmtl hull_illumination
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+
+newmtl internet_kiosk
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+map_Kd scenarios\objects\solo\spacestation\ss_internet_kiosk\bitmaps\ss_internet_kiosk.tif
+
+newmtl doors_large
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+map_Kd scenarios\bitmaps\solo\spacestation\ss_doors_large.tif
+
+newmtl cruiser_interior_core
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+
+newmtl cruiser_interior_core_plasma
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+
+newmtl cruiser_interior_side
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+
+newmtl cruiser_interior_up
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+
+newmtl invisible
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+
+newmtl ss_door_cov_boarding
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+
+newmtl cov_portable_shield
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+map_Kd scenarios\objects\covenant\military\cov_portable_shield\bitmaps\cov_portable_shield.tif
+
+newmtl cov_portable_shield_illum
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+
+newmtl shield_energy
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+
+newmtl holo_display_unsc_logo
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+
+newmtl holo_display_large
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+
+newmtl holo_display_large_fleet
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+
+newmtl holo_display_ident
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+
+newmtl news_drone
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+map_Kd objects\cinematics\news_drone\bitmaps\news_drone.tif
+
+newmtl news_drone_illum
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+
+newmtl fabric_lord_hood
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+map_Kd objects\characters\lord_hood\bitmaps\lord_hood_main.tif
+
+newmtl plastic_lord_hood
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+map_Kd objects\characters\lord_hood\bitmaps\lord_hood_main.tif
+
+newmtl head
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+map_Kd objects\characters\elite\bitmaps\head.tif
+
+newmtl teeth
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+map_Kd objects\characters\elite\bitmaps\teeth.tif
+
+newmtl elite_honor_armor
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+map_Kd objects\characters\elite\elite_honor_guard\bitmaps\elite_honor_armor.tif
+
+newmtl elite_honor_inset_lights
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+
+newmtl arms
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+map_Kd objects\characters\elite\bitmaps\arms.tif
+
+newmtl legs
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+map_Kd objects\characters\elite\bitmaps\legs.tif
+
+newmtl inset_lights
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+
+newmtl pike
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+map_Kd objects\weapons\melee\pike\bitmaps\pike.tif
+
+newmtl torso
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+map_Kd objects\characters\elite\bitmaps\torso.tif
+
+newmtl grunt_arms
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+map_Kd objects\characters\grunt\bitmaps\arms.tif
+
+newmtl grunt_backpack
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+map_Kd objects\characters\grunt\bitmaps\backpack.tif
+
+newmtl grunt_illum
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+
+newmtl grunt_head
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+map_Kd objects\characters\grunt\bitmaps\head.tif
+
+newmtl grunt_legs
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+map_Kd objects\characters\grunt\bitmaps\legs.tif
+
+newmtl grunt_torso
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+map_Kd objects\characters\grunt\bitmaps\chest.tif
+
+newmtl jackal_head
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+map_Kd objects\characters\jackal\bitmaps\head.tif
+
+newmtl jackal_teethandspikes
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+map_Kd objects\characters\jackal\bitmaps\head.tif
+
+newmtl jackal_arms
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+map_Kd objects\characters\jackal\bitmaps\arms.tif
+
+newmtl jackal_torso
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+map_Kd objects\characters\jackal\bitmaps\torso.tif
+
+newmtl jackal_legs
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+map_Kd objects\characters\jackal\bitmaps\legs.tif
+
+newmtl jackal_eyes
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+
+newmtl jackal_pupils
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+
+newmtl holo_const_plate01
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+
+newmtl red_square
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+map_Kd scenarios\decals\human\military\bitmaps\red_square.tif
+
+newmtl marine_dress
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+map_Kd objects\characters\lord_hood\bitmaps\lord_hood_main.tif
+
+newmtl marine_standard
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+map_Kd objects\characters\marine\bitmaps\marine_standard.tif
+
+newmtl head_smith
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+map_Kd objects\characters\marine\bitmaps\head_smith.tif
+
+newmtl marine_medals
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+map_Kd objects\characters\lord_hood\bitmaps\lord_hood_badging.tif
+
+newmtl medal_velvet
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+map_Kd objects\cinematics\human\medals\medal_tray\bitmaps\medal_case.tif
+
+newmtl medal_case
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+map_Kd objects\cinematics\human\medals\medal_tray\bitmaps\medal_case.tif
+
+newmtl striplight_a_x
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+
+newmtl manacle_ring
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+
+newmtl elite_helmet_charred
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+map_Kd objects\characters\elite\bitmaps\helmet.tif
+
+newmtl colonial_cross
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+map_Kd objects\cinematics\human\medals\colonial_cross\bitmaps\colonial_cross.tif
+
+newmtl ss_look_device
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+map_Kd scenarios\objects\solo\spacestation\ss_look_device\bitmaps\ss_look_device.tif
+
+newmtl military_equipment
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+map_Kd objects\gear\human\military\bitmaps\human_military_equipment.tif
+
+newmtl military_decals_6
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+map_Kd objects\gear\human\military\bitmaps\military_decal_ap_case.tif
+
+newmtl matte_grey_edge
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+map_Kd scenarios\bitmaps\human\urban\metals\matte_grey_edge_dif.tif
+
+newmtl metal_strips_c
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+map_Kd scenarios\bitmaps\human\urban\metals\metal_strips_c_dif.tif
+
+newmtl light_spot_red
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+map_Kd shaders\default_bitmaps\bitmaps\color_red.tif
+
+newmtl debris_pile_fc
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+map_Kd scenarios\objects\solo\earthcity\debris_pile_large\bitmaps\debris_pile_large_color.tif
+
+newmtl debris_buildingchunk_rebar
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+map_Kd scenarios\objects\solo\earthcity\debris_buildingchunk01\bitmaps\debris_bldingchnk_rebar_color.tif
+
+newmtl emerg_light
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+map_Kd shaders\default_bitmaps\bitmaps\gray_50_percent.tif
+
+newmtl elevator_gunchamber
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+map_Kd scenarios\bitmaps\solo\spacestation\ss_elevator_gunchamber.tif
+
+newmtl elevator_gunchamber_illum
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+map_Kd scenarios\bitmaps\solo\spacestation\ss_elevator_gunchamber.tif
+
+newmtl elevator_gunchamber_glass
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+
+newmtl panel_hall_hab_destroyed_blue
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+map_Kd scenarios\objects\solo\spacestation\ss_panel_hall_hab_destroyed\bitmaps\panel_hall_hab_destroyed.tif
+
+newmtl panel_hall_hab_destroyed_background
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+map_Kd scenarios\objects\solo\spacestation\ss_panel_hall_hab_destroyed\bitmaps\panel_hall_hab_destroyed_background.tif
+
+newmtl panel_hall_hab_destroyed_red
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+map_Kd scenarios\objects\solo\spacestation\ss_panel_hall_hab_destroyed\bitmaps\panel_hall_hab_destroyed.tif
+
+newmtl bloom
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+
+newmtl crowd_front
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+map_Kd objects\cinematics\covenant\crowds\bitmaps\characters.tif
+
+newmtl earth_defense_plat_cairo
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+
+newmtl johnson_cigar
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+map_Kd objects\cinematics\human\cigar\bitmaps\cigar.tif
+
+newmtl seraph
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+map_Kd scenarios\objects\vehicles\c_seraph\bitmaps\seraph.tif
+
+newmtl seraph_phaser_ring
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+map_Kd scenarios\objects\vehicles\c_seraph\bitmaps\seraph_phaser_ring.tif
+
+newmtl panel_mech_tile_ext
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+map_Kd scenarios\bitmaps\solo\spacestation\panel_mech_tile.tif
+
+newmtl exterior_gun_sheath
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+map_Kd scenarios\bitmaps\solo\spacestation\ss_exterior_gun_sheath.tif
+
+newmtl exterior_gun_bar
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+map_Kd scenarios\bitmaps\solo\spacestation\ss_exterior_gun_bar.tif
+
+newmtl panel_hall_mech_floor
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+map_Kd scenarios\bitmaps\solo\spacestation\panel_hall_mech_floor.tif
+
+newmtl panel_mech_strips_hazard_stripe
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+map_Kd scenarios\bitmaps\solo\spacestation\panel_strips_hazard_stripe.tif
+
+newmtl panel_strips_unpainted
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+map_Kd scenarios\bitmaps\solo\spacestation\panel_strips_unpainted.tif
+
+newmtl panel_mech_long
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+map_Kd scenarios\bitmaps\solo\spacestation\panel_mech_long.tif
+
+newmtl panel_mech_center_gunchamber
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+map_Kd scenarios\bitmaps\solo\spacestation\panel_mech_center_gunchamber.tif
+
+newmtl panel_mech_tile_orange
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+map_Kd scenarios\bitmaps\solo\spacestation\panel_mech_tile_orange.tif
+
+newmtl ss_tram_car
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+map_Kd scenarios\objects\solo\spacestation\ss_tram_car\bitmaps\ss_tram_car.tif
+
+newmtl door_mech_small
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+map_Kd scenarios\bitmaps\solo\spacestation\ss_door_mech_small.tif
+
+newmtl mac_round
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+map_Kd scenarios\objects\human\military\mac_round\bitmaps\mac_round.tif
+
+newmtl gun_loader
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+map_Kd scenarios\bitmaps\solo\spacestation\ss_gun_loader.tif
+
+newmtl light_pool_b
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+map_Kd scenarios\bitmaps\solo\spacestation\light_pool_b.tif
+
+newmtl light_pool_a
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+map_Kd scenarios\bitmaps\solo\spacestation\light_pool_a.tif
+
+newmtl light_volume_wide
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+
+newmtl door_tram
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+map_Kd scenarios\bitmaps\solo\spacestation\ss_door_tram.tif
+
+newmtl gun_rack
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+map_Kd scenarios\bitmaps\solo\spacestation\ss_gun_rack.tif
+
+newmtl hangar_door_switch
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+map_Kd scenarios\objects\solo\spacestation\ss_hangar_door_switch\bitmaps\hangar_door_switch.tif
+
+newmtl hangar_door_column
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+map_Kd scenarios\objects\solo\spacestation\ss_hangar_door_switch\bitmaps\hangar_door_column.tif
+
+newmtl door_hangar_cinematic
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+map_Kd scenarios\bitmaps\solo\spacestation\ss_door_hangar_cinematic.tif
+
+newmtl door_hangar_cinematic_glass
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+
+newmtl high_door
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+map_Kd scenarios\objects\solo\highcharity\high_door\bitmaps\high_door_dif.tif
+
+newmtl high_door_glass
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+
+newmtl high_door_grand
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+map_Kd scenarios\objects\solo\highcharity\high_door_grand\bitmaps\high_door_grand_dif.tif
+
+newmtl high_small_door
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+map_Kd scenarios\objects\solo\highcharity\high_small_door\bitmaps\high_small_door_dif.tif
+
+newmtl ss_gun_rack_slim
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+map_Kd scenarios\objects\solo\spacestation\ss_gun_rack_slim\bitmaps\ss_gun_rack_slim.tif
+
+newmtl lift_door
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+map_Kd scenarios\bitmaps\solo\highcharity\lift_door.tif
+
+newmtl ss_switch
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+map_Kd scenarios\objects\solo\spacestation\ss_switch\bitmaps\switch.tif
+
+newmtl military_decals_3
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+map_Kd objects\gear\human\military\bitmaps\military_decal_big[0].tif
+
+newmtl vending_machine
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+map_Kd scenarios\objects\human\residential\vending_machine\bitmaps\vending_machine.tif
+
+newmtl deployable_shield
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+map_Kd scenarios\objects\human\military\deployable_shield_corner\bitmaps\deployable_shield.tif
+
+newmtl panel_crate_multi
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+map_Kd scenarios\bitmaps\solo\spacestation\ss_panel_crate_multi.tif
+
+newmtl panel_crate_multi_single
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+map_Kd scenarios\bitmaps\solo\spacestation\ss_panel_crate_multi_single.tif
+
+newmtl military_decals_1
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+map_Kd objects\gear\human\military\bitmaps\military_decal_1_a[0].tif
+
+newmtl military_decals_5
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+map_Kd objects\gear\human\military\bitmaps\military_decal_small[0].tif
+
+newmtl deployable_shield
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+map_Kd scenarios\objects\human\military\deployable_shield_corner\bitmaps\deployable_shield.tif
+
+newmtl couch
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+map_Kd shaders\default_bitmaps\bitmaps\gray_50_percent.tif
+
+newmtl corian
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+map_Kd scenarios\bitmaps\solo\spacestation\tile_metal_dark.tif
+
+newmtl trashcan
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+map_Kd scenarios\objects\solo\spacestation\ss_furniture\bitmaps\trashcan.tif
+
+newmtl military_decals_4
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+map_Kd objects\gear\human\military\bitmaps\military_decal_rat[0].tif
+
+newmtl equipment_cart
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+map_Kd objects\cinematics\human\equipment_cart\bitmaps\equipment_cart.tif
+
+newmtl helmet_standard
+Kd 1 1 1
+Ks 0 0 0
+Ke 0 0 0
+Tf 1 1 1
+illum 1
+map_Kd objects\characters\marine\bitmaps\helmet_standard.tif
+

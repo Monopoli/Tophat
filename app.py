@@ -22,9 +22,11 @@ from ui_map import MapMixin
 from ui_player import PlayerMixin, read_all_players
 from ui_scripts import ScriptsMixin, get_script_db
 from ui_bsp import BspMixin, get_bsp_sections, get_bsp_geometry
+from ui_cheats import CheatsMixin
 
 
-class App(ObjectTableMixin, DetailMixin, AupMixin, MapMixin, PlayerMixin, ScriptsMixin, BspMixin, tk.Tk):
+class App(ObjectTableMixin, DetailMixin, AupMixin, MapMixin, PlayerMixin, ScriptsMixin, BspMixin,
+          CheatsMixin, tk.Tk):
     REFRESH_MS = 500
 
     def __init__(self):
@@ -90,6 +92,12 @@ class App(ObjectTableMixin, DetailMixin, AupMixin, MapMixin, PlayerMixin, Script
         if hasattr(self, '_aup_btn'):
             self._aup_btn.config(state=tk.DISABLED)
             self._aup_status_lbl.config(text="No unit selected.", foreground="#9898b8")
+        self._cheats_selected_index = None
+        if hasattr(self, '_cheats_tree'):
+            for btn in self._cheats_action_buttons():
+                btn.config(state=tk.DISABLED)
+            self._cheats_sel_lbl.config(text="No unit selected.", foreground="#9898b8")
+            self._cheats_action_lbl.config(text="")
         if hasattr(self, '_player_data'):
             self._player_data.clear()
         if hasattr(self, '_scripts_db'):
@@ -252,6 +260,10 @@ class App(ObjectTableMixin, DetailMixin, AupMixin, MapMixin, PlayerMixin, Script
         tab_bsp = ttk.Frame(self._main_nb)
         self._main_nb.add(tab_bsp, text="BSP")
         self._build_bsp_panel(tab_bsp)
+
+        tab_cheats = ttk.Frame(self._main_nb)
+        self._main_nb.add(tab_cheats, text="Cheats")
+        self._build_cheats_panel(tab_cheats)
 
         # ── Filter bar (inside Objects tab) ────────────────────────────────────
         fbar = ttk.Frame(tab_objects)
@@ -576,6 +588,7 @@ class App(ObjectTableMixin, DetailMixin, AupMixin, MapMixin, PlayerMixin, Script
             self._objects = objects
             self._apply_filter()
             self._refresh_aup_list()
+            self._refresh_cheats_list()
             self._map_tick()
             self._refresh_player_tab()
             self._scripts_tick()
