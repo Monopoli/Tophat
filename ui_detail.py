@@ -24,6 +24,19 @@ class DetailMixin:
                                    command=self._toggle_pin, width=7)
         self._pin_btn.pack(side=tk.RIGHT)
 
+        # ── Object thumbnail (centered, sits above the HP/Shield bars) ─────
+        thumb_row = ttk.Frame(parent)
+        thumb_row.pack(fill=tk.X, padx=8, pady=(0, 4))
+        self._detail_thumb_lbl = tk.Label(
+            thumb_row, bg="#0d0d12", bd=0,
+            highlightthickness=1, highlightbackground="#2e2e48")
+        self._detail_thumb_lbl.pack(side=tk.TOP, anchor=tk.CENTER)
+        # Seed with the placeholder so the area is reserved before any
+        # selection is made (mirrors the grid view's empty-thumb look).
+        ph = self._obj_get_placeholder_large()
+        self._detail_thumb_lbl.config(image=ph)
+        self._detail_thumb_lbl.image = ph
+
         sep = ttk.Separator(parent, orient=tk.HORIZONTAL)
         sep.pack(fill=tk.X, padx=8, pady=(2, 4))
 
@@ -642,11 +655,18 @@ class DetailMixin:
         typ  = o.get("type", "?")
         idx  = o.get("index", "?")
         salt = o.get("salt", 0)
+        def_idx = o.get('definition', 0) or 0
+        def_tag = o.get('definition_tag', '') or tag_name_from_datum(def_idx)
 
         color = TYPE_COLORS.get(typ, "#aaaaaa")
         self._detail_title.config(
             text=f"[{idx:04d}:{salt:04X}]  {typ}",
             foreground=color)
+
+        # Object thumbnail (centered, above the HP/Shield bars)
+        thumb_img = self._obj_get_thumb_large(def_tag)
+        self._detail_thumb_lbl.config(image=thumb_img)
+        self._detail_thumb_lbl.image = thumb_img  # keep a reference
 
         # Health/shield bars
         self._draw_bars(o)
@@ -677,8 +697,6 @@ class DetailMixin:
 
         # s_object_data
         section("s_object_data")
-        def_idx = o.get('definition', 0) or 0
-        def_tag = o.get('definition_tag', '') or tag_name_from_datum(def_idx)
         row("Definition",    f"0x{def_idx:08X}  {def_tag}", "addr")
         row("PlacementIndex",str(o.get("placement_idx", "?")))
         row("NameListIndex", str(o.get("name_idx", "?")))

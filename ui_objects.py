@@ -20,6 +20,11 @@ EMPTY_CLR = '#16161f'
 ACTIVE_BORDER = '#2e2e48'
 EMPTY_BORDER  = '#1e1e2a'
 
+# ── Larger thumbnail used by the Objects-tab detail panel (above HP/Shield
+#    bars) — same 4:3 ratio as the grid thumbnail, just bigger ─────────────
+DETAIL_THUMB_W = 144
+DETAIL_THUMB_H = 108
+
 
 def make_display_type(o: dict) -> str:
     """Return 'type:tagname' if a resolved tag suffix is available, else just 'type'."""
@@ -55,6 +60,10 @@ class ObjectTableMixin:
         self._obj_canvas      = None
         self._obj_canvas_vsb  = None
         self._obj_grid_frame  = None     # frame holding canvas + scrollbar
+        # Larger variant for the detail-panel thumbnail (separate cache so
+        # it doesn't collide with / resize the grid-view's 96×72 images)
+        self._obj_img_cache_large   = {}
+        self._obj_placeholder_large = None
 
     # ── Filter / populate (table view) ────────────────────────────────────
 
@@ -432,3 +441,55 @@ class ObjectTableMixin:
             self._obj_placeholder = tk.PhotoImage(width=1, height=1)
 
         return self._obj_placeholder
+
+    # ── Larger variant, used by the Objects-tab detail panel ───────────────
+    # (kept separate from _obj_get_thumb/_obj_get_placeholder above so the
+    # grid view's 96×72 cells are completely unaffected by this size.)
+
+    def _obj_get_thumb_large(self, definition_tag: str):
+        """Return a larger PhotoImage for the detail panel, loading from disk or placeholder."""
+        if definition_tag in self._obj_img_cache_large:
+            return self._obj_img_cache_large[definition_tag]
+
+        img = None
+        path = _tag_to_image_path(definition_tag)
+        if path and _PIL_OK and os.path.isfile(path):
+            try:
+                pil = Image.open(path).convert("RGBA").resize(
+                    (DETAIL_THUMB_W, DETAIL_THUMB_H), Image.LANCZOS
+                )
+                img = ImageTk.PhotoImage(pil)
+            except Exception:
+                img = None
+
+        if img is None:
+            img = self._obj_get_placeholder_large()
+
+        self._obj_img_cache_large[definition_tag] = img
+        return img
+
+    def _obj_get_placeholder_large(self):
+        """Lazily create and return the larger placeholder PhotoImage."""
+        if self._obj_placeholder_large is not None:
+            return self._obj_placeholder_large
+
+        if _PIL_OK:
+            pil = Image.new("RGB", (DETAIL_THUMB_W, DETAIL_THUMB_H), color=(22, 22, 32))
+            draw = ImageDraw.Draw(pil)
+            # Dashed border
+            dash_clr = (40, 40, 60)
+            for x in range(0, DETAIL_THUMB_W, 8):
+                draw.rectangle([x, 0, min(x + 4, DETAIL_THUMB_W - 1), 0], fill=dash_clr)
+                draw.rectangle([x, DETAIL_THUMB_H - 1, min(x + 4, DETAIL_THUMB_W - 1), DETAIL_THUMB_H - 1], fill=dash_clr)
+            for y in range(0, DETAIL_THUMB_H, 8):
+                draw.rectangle([0, y, 0, min(y + 4, DETAIL_THUMB_H - 1)], fill=dash_clr)
+                draw.rectangle([DETAIL_THUMB_W - 1, y, DETAIL_THUMB_W - 1, min(y + 4, DETAIL_THUMB_H - 1)], fill=dash_clr)
+            # Crossed diagonals
+            draw.line([(6, 6), (DETAIL_THUMB_W - 6, DETAIL_THUMB_H - 6)], fill=(35, 35, 55), width=1)
+            draw.line([(DETAIL_THUMB_W - 6, 6), (6, DETAIL_THUMB_H - 6)], fill=(35, 35, 55), width=1)
+            self._obj_placeholder_large = ImageTk.PhotoImage(pil)
+        else:
+            # No Pillow — use a 1×1 transparent image; label bg colour is the visual
+            self._obj_placeholder_large = tk.PhotoImage(width=1, height=1)
+
+        return self._obj_placeholder_large

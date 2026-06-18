@@ -1,11 +1,10 @@
-"""TopHat — Halo 2 Xbox Object Monitor — main App class."""
+"""Halo 2 Xbox Object Monitor — main App class."""
 import tkinter as tk
 from tkinter import ttk, messagebox
 import math
 import time
 import sys
 import struct
-import os
 
 from constants import (
     OBJECT_TYPES, TYPE_COLORS, HEADER_FLAG_NAMES,
@@ -23,15 +22,16 @@ from ui_map import MapMixin
 from ui_player import PlayerMixin, read_all_players
 from ui_scripts import ScriptsMixin, get_script_db
 from ui_bsp import BspMixin, get_bsp_sections, get_bsp_geometry
+from ui_cheats import CheatsMixin
+from ui_tags import TagsMixin
 
 
-class App(ObjectTableMixin, DetailMixin, AupMixin, MapMixin, PlayerMixin, ScriptsMixin, BspMixin, tk.Tk):
+class App(ObjectTableMixin, DetailMixin, AupMixin, MapMixin, PlayerMixin, ScriptsMixin, BspMixin, TagsMixin, CheatsMixin, tk.Tk):
     REFRESH_MS = 500
 
     def __init__(self):
         super().__init__()
-        self.title("TopHat — Halo 2 Live Monitor")
-        self._set_app_icon()
+        self.title("Halo 2 – Live Object Monitor")
         self.geometry("1280x800")
         self.minsize(900, 600)
         self.configure(bg="#1a1a1a")
@@ -69,20 +69,6 @@ class App(ObjectTableMixin, DetailMixin, AupMixin, MapMixin, PlayerMixin, Script
         self._build_ui()
         self._try_auto_connect()
 
-    def _set_app_icon(self):
-        """Set the window/taskbar icon to the TopHat logo.
-
-        Looks for assets/tophat.ico next to this file. Wrapped in try/except
-        since a missing or unreadable icon file should never prevent the
-        app from launching.
-        """
-        try:
-            icon_path = os.path.join(
-                os.path.dirname(os.path.abspath(__file__)), "assets", "tophat.ico"
-            )
-            self.iconbitmap(default=icon_path)
-        except Exception:
-            pass
 
     def _on_map_change(self, map_str: str):
         """Called when the map scenario string changes in memory."""
@@ -106,6 +92,11 @@ class App(ObjectTableMixin, DetailMixin, AupMixin, MapMixin, PlayerMixin, Script
         if hasattr(self, '_aup_btn'):
             self._aup_btn.config(state=tk.DISABLED)
             self._aup_status_lbl.config(text="No unit selected.", foreground="#9898b8")
+        self._cheats_selected_index = None
+        if hasattr(self, '_cheats_sel_lbl'):
+            self._cheats_sel_lbl.config(text="No unit selected.", foreground="#9898b8")
+            for btn in self._cheats_action_buttons():
+                btn.config(state=tk.DISABLED)
         if hasattr(self, '_player_data'):
             self._player_data.clear()
         if hasattr(self, '_scripts_db'):
@@ -268,6 +259,14 @@ class App(ObjectTableMixin, DetailMixin, AupMixin, MapMixin, PlayerMixin, Script
         tab_bsp = ttk.Frame(self._main_nb)
         self._main_nb.add(tab_bsp, text="BSP")
         self._build_bsp_panel(tab_bsp)
+
+        tab_tags = ttk.Frame(self._main_nb)
+        self._main_nb.add(tab_tags, text="Tags")
+        self._build_tags_panel(tab_tags)
+
+        tab_cheats = ttk.Frame(self._main_nb)
+        self._main_nb.add(tab_cheats, text="Cheats")
+        self._build_cheats_panel(tab_cheats)
 
         # ── Filter bar (inside Objects tab) ────────────────────────────────────
         fbar = ttk.Frame(tab_objects)
@@ -596,6 +595,7 @@ class App(ObjectTableMixin, DetailMixin, AupMixin, MapMixin, PlayerMixin, Script
             self._refresh_player_tab()
             self._scripts_tick()
             self._bsp_tick()
+            self._refresh_cheats_list()
             n = len(objects)
             alert_str = f"  ⚑ {len(self._flag_alerts)}" if self._flag_alerts else ""
             self._stat_lbl.config(
@@ -627,14 +627,6 @@ def main():
         print("This tool requires Windows (ReadProcessMemory API).")
         print("It is designed to attach to Halo 2 running in Xenia or XQEMU.")
         sys.exit(1)
-    try:
-        # Without this, Windows groups the process under python.exe's own
-        # AppUserModelID and shows the generic Python icon on the taskbar
-        # button instead of our custom one, even though iconbitmap() is set.
-        import ctypes
-        ctypes.windll.shell32.SetCurrentProcessExplicitAppUserModelID("TopHat.HaloMonitor")
-    except Exception:
-        pass
     app = App()
     app.protocol("WM_DELETE_WINDOW", app.on_closing)
     app.mainloop()

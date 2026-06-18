@@ -3,8 +3,7 @@ import struct
 from constants import (
     ARRAY_BASE, ARRAY_HDR_SIZE, DATUM_SIZE, MAX_OBJECTS,
     OBJECT_DATA_SIZE, OBJECT_TYPES, MAP_STRING_ADDR, MAP_STRING_MAXLEN,
-    OBJ_ORIGIN_OFF, OBJ_FORWARD_OFF, OBJ_UP_OFF, OBJ_TRANS_VEL_OFF,
-    OBJ_ANG_VEL_OFF, OBJ_HEALTH_OFF, OBJ_SHIELDS_OFF,
+    OBJ_ORIGIN_OFF, OBJ_TRANS_VEL_OFF, OBJ_HEALTH_OFF, OBJ_SHIELDS_OFF,
 )
 from memory import MemoryReader
 from tag_database import tag_name_from_datum
@@ -40,11 +39,11 @@ def parse_object_data(mem: MemoryReader, obj_addr: int) -> dict:
         "next_index":     ri32(0x0C),
         "parent_index":   ri32(0x14),
         "placement_idx":  ri16(0x1A),
-        "origin":        (rf(OBJ_ORIGIN_OFF),    rf(OBJ_ORIGIN_OFF+4),    rf(OBJ_ORIGIN_OFF+8)),
-        "forward":       (rf(OBJ_FORWARD_OFF),   rf(OBJ_FORWARD_OFF+4),   rf(OBJ_FORWARD_OFF+8)),
-        "up":            (rf(OBJ_UP_OFF),        rf(OBJ_UP_OFF+4),        rf(OBJ_UP_OFF+8)),
-        "trans_vel":     (rf(OBJ_TRANS_VEL_OFF), rf(OBJ_TRANS_VEL_OFF+4), rf(OBJ_TRANS_VEL_OFF+8)),
-        "ang_vel":       (rf(OBJ_ANG_VEL_OFF),   rf(OBJ_ANG_VEL_OFF+4),   rf(OBJ_ANG_VEL_OFF+8)),
+        "origin":        (rf(OBJ_ORIGIN_OFF), rf(OBJ_ORIGIN_OFF + 0x4), rf(OBJ_ORIGIN_OFF + 0x8)),
+        "forward":       (rf(0x70), rf(0x74), rf(0x78)),
+        "up":            (rf(0x7C), rf(0x80), rf(0x84)),
+        "trans_vel":     (rf(OBJ_TRANS_VEL_OFF), rf(OBJ_TRANS_VEL_OFF + 0x4), rf(OBJ_TRANS_VEL_OFF + 0x8)),
+        "ang_vel":       (rf(0x94), rf(0x98), rf(0x9C)),
         "scale":          rf(0xA0),
         "type_byte":     raw[0xAA] if 0xAA < len(raw) else None,
         "name_idx":      ri16(0xAC),
